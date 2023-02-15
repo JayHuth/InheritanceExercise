@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.NetworkInformation;
 
 namespace Inheritance
 {
@@ -6,34 +7,54 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            // TODO Be sure to follow best practice when creating your classes
+            
+     /*Create an object of your Bird class
+     *  give values to your members using the object of your Bird class
+     *  
+     * Creatively display the class member values 
+     */
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
+            Bird pigeoto = new Bird()
+            {
 
+                Name = "Pigeoto",
+                Age = 1,
+                Type = "Bird",
+                Color = "Blue",
+                Wieght = 3,
+                TypeOfBird = "Blue Bird",
+                CanItFly = true,
+                Sound = "Tweet Tweet",
 
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
+            };
 
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
+            Console.WriteLine($"{pigeoto.Name} is a {pigeoto.Type}, more specifically a {pigeoto.TypeOfBird}. " +
+                $"They are a {pigeoto.Age} year old, and they wiegh {pigeoto.Wieght} pounds.");
+            Console.WriteLine($"Thier feathers are {pigeoto.Color}, and when they sing they make this sound {pigeoto.Sound}. " +
+                $"It is {pigeoto.CanItFly} that pigeoto can fly.");
+            Console.WriteLine();
 
+            Reptile lizzy = new Reptile()
+            {
 
+                Name = "Lizzy",
+                Age = 5,
+                Type = "Lizard",
+                Color = "Green",
+                Wieght = 50,
+                HasScales = true,
+                PreferredHabitat = "Desert",
+                IsColdBlooded = true,
+                
+            };
 
+            Console.WriteLine($"{lizzy.Name} is a {lizzy.Age} year old {lizzy.Type}, and it is {lizzy.HasScales} that they have scales.");
+            Console.WriteLine($"{lizzy.Name}, Weighs a massive {lizzy.Wieght} pounds, and it is {lizzy.IsColdBlooded} that they are cold blooded.");
+            Console.WriteLine($"{lizzy.Name}, is {lizzy.Color} and they prefer to live in the {lizzy.PreferredHabitat}");
 
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
-
-            /*Create an object of your Reptile class
-             *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
-             */
         }
+         
     }
+           
+    
 }
